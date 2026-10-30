@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عسل وشفاء | العسل الطبيعي</title>
+<style>
+:root{--brown:#3b210e;--brown2:#5a3215;--gold:#e5a323;--cream:#fff8e8;--light:#fff1cc;--text:#4b3523}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Tahoma,Arial,sans-serif;background:#fffaf1;color:var(--text);line-height:1.9}
+header{position:sticky;top:0;z-index:10;background:rgba(59,33,14,.97);color:white;padding:12px 5%;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 5px 20px #0002}
+.brand{display:flex;align-items:center;gap:12px;color:#ffdc77;font-size:25px;font-weight:bold}
+.brand img{width:66px;height:56px;object-fit:contain;border-radius:10px}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;padding:8px 12px;border-radius:20px}
+nav a:hover{background:#ffffff1b;color:#ffdc77}
+.hero{min-height:540px;padding:70px 20px;text-align:center;color:white;background:linear-gradient(110deg,rgba(35,18,5,.72),rgba(35,18,5,.40)),url("clover.png");background-size:cover;background-position:center;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.hero .eyebrow{background:#ffd44722;border:1px solid #ffd44788;color:#ffdf80;border-radius:30px;padding:5px 18px;margin-bottom:14px}
+.hero h1{font-size:clamp(32px,5vw,52px);color:#ffdc55;margin-bottom:10px;text-shadow:0 3px 12px #0006}
+.hero h2{font-size:clamp(22px,3vw,30px);margin-bottom:15px}
+.hero p{font-size:18px;max-width:760px;margin-bottom:27px}
+.btn{background:linear-gradient(135deg,#ffe17a,#e8a51c);color:#351b0b;padding:12px 24px;border:none;border-radius:28px;font-size:16px;font-weight:bold;text-decoration:none;display:inline-block;cursor:pointer;box-shadow:0 5px 12px #00000017;transition:transform .2s,filter .2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
+section{padding:60px 5%}
+.title{text-align:center;font-size:clamp(27px,3vw,36px);color:#8a570b;margin-bottom:12px}
+.title:after{content:"";display:block;width:70px;height:4px;background:var(--gold);border-radius:4px;margin:8px auto 0}
+.intro{text-align:center;max-width:850px;margin:0 auto 32px;color:#76604a}
+.benefits,.cart-section{background:linear-gradient(135deg,#fff1c9,#fff9e9)}
+.benefit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.benefit-box{background:white;border:1px solid #f2dfb7;border-radius:18px;padding:25px;text-align:center;box-shadow:0 8px 24px #54300d0c}
+.benefit-box .icon{font-size:35px}
+.benefit-box h3{color:#8a570b;margin:7px 0}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:32px;align-items:stretch}
+.product{background:white;border-radius:22px;overflow:hidden;text-align:center;box-shadow:0 10px 30px #54300d13;border:1px solid #f0dfbd;padding-bottom:24px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.product:hover{transform:translateY(-6px);box-shadow:0 16px 35px #54300d20}
+.product img{width:100%;height:300px;object-fit:cover;display:block}
+.product h3{color:#80500c;font-size:25px;margin:16px 10px 5px}
+.product p{padding:0 18px;color:#66513d;margin:8px 0}
+.tag{display:inline-block;background:#fff0c4;color:#82520b;padding:3px 12px;border-radius:20px;font-size:14px;margin:4px auto}
+.product-info{margin:16px;padding:17px;background:#fff9e9;border-right:4px solid #d49b22;border-radius:12px;text-align:right}
+.product-info h4{color:#80500c;margin-bottom:8px;font-size:18px}
+.product-info ul{padding-right:20px}
+.product-info li{margin-bottom:8px}
+.price{color:#a45d00;font-size:27px;font-weight:bold;margin:15px 0}
+.product .btn{margin:auto 18px 0;align-self:center}
+.cart-box{max-width:900px;margin:auto;background:white;padding:28px;border-radius:20px;box-shadow:0 8px 28px #54300d12}
+.cart-item{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 0;border-bottom:1px solid #eee}
+.remove-btn{background:#b72e20;color:white;border:none;border-radius:8px;padding:7px 12px;cursor:pointer}
+.total{font-size:25px;color:#80500c;font-weight:bold;margin:20px 0}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.clear-btn{background:#6c6258;color:white}
+.contact{text-align:center}
+.contact-card{max-width:700px;margin:25px auto 0;background:white;border:1px solid #f0dfbd;border-radius:20px;padding:25px;box-shadow:0 8px 24px #54300d0c}
+.contact p{font-size:18px;margin:12px 0}
+.contact a:not(.btn){color:#80500c;font-weight:bold;text-decoration:none}
+.notice{max-width:1000px;margin:28px auto 0;padding:17px;background:#fff9e8;border:1px solid #e7c77e;border-radius:12px;color:#65451b}
+footer{background:#351b0b;color:white;text-align:center;padding:28px}
+footer img{width:120px;height:65px;object-fit:contain;margin-bottom:8px}
+@media(max-width:650px){header{justify-content:center;text-align:center}.brand{justify-content:center}.hero{min-height:470px}.hero h1{font-size:32px}nav{justify-content:center}nav a{font-size:14px;padding:6px 8px}.product img{height:270px}section{padding:42px 4%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><img src="logo.svg" alt="شعار عسل وشفاء"><span>عسل وشفاء 🍯</span></div>
+  <nav>
+    <a href="#home">الرئيسية</a><a href="#benefits">مميزات العسل</a><a href="#products">منتجاتنا</a><a href="#cart">السلة 🛒</a><a href="#contact">تواصل معنا</a>
+  </nav>
+</header>
+
+<div class="hero" id="home">
+  <div class="eyebrow">🍯 عسل طبيعي • مذاق أصيل</div>
+  <h1>أهلاً بيك في عسل وشفاء</h1>
+  <h2>طعم الطبيعة في كل ملعقة</h2>
+  <p>اكتشف أنواع العسل المختلفة، واختار من عسل البرسيم والقطن وزهور الموز. جودة ومذاق يخلّوا كل ملعقة تجربة مميزة.</p>
+  <a class="btn" href="#products">اكتشف منتجاتنا ↓</a>
+</div>
+
+<section class="benefits" id="benefits">
+  <h2 class="title">مميزات العسل الطبيعي</h2>
+  <p class="intro">العسل مصدر للسكريات والطاقة، ويمكن استخدامه للتحلية باعتدال ضمن نظام غذائي متوازن.</p>
+  <div class="benefit-grid">
+    <div class="benefit-box"><div class="icon">⚡</div><h3>مصدر للطاقة</h3><p>يحتوي على سكريات تمد الجسم بالطاقة.</p></div>
+    <div class="benefit-box"><div class="icon">☕</div><h3>للتحلية</h3><p>يمكن إضافته إلى اللبن والزبادي والشوفان وبعض المشروبات.</p></div>
+    <div class="benefit-box"><div class="icon">🍰</div><h3>استخدامات متنوعة</h3><p>مناسب لوصفات الحلويات والمخبوزات وبعض الأكلات.</p></div>
+    <div class="benefit-box"><div class="icon">🐝</div><h3>نكهات مختلفة</h3><p>يختلف لون العسل وطعمه حسب مصدر الرحيق وظروف الإنتاج.</p></div>
+  </div>
+</section>
+
+<section id="products">
+  <h2 class="title">اختار عسلَك المفضل</h2>
+  <p class="intro">كل الأنواع بسعر 250 جنيه للبرطمان. اختار المنتج وضيفه لسلة المشتريات.</p>
+  <div class="products">
+    <div class="product">
+      <img src="clover.png" alt="عسل زهرة البرسيم">
+      <h3>عسل زهرة البرسيم</h3><span class="tag">مذاق خفيف</span>
+      <p>يتميز عادةً بلونه الفاتح ومذاقه السكري الخفيف، وقد تختلف صفاته حسب مصدر العسل.</p>
+      <div class="product-info"><h4>🍯 معلومات عن المنتج</h4><ul>
+        <li><strong>مصدر للطاقة:</strong> يحتوي على سكريات بسيطة يستخدمها الجسم للطاقة.</li>
+        <li><strong>استخدام غذائي:</strong> يمكن إضافته للزبادي والشوفان والمشروبات والحلويات.</li>
+        <li><strong>مركبات نباتية:</strong> قد يحتوي العسل على مركبات مضادة للأكسدة تختلف كميتها حسب المصدر.</li>
+      </ul><p>العسل ليس بديلًا عن العلاج الطبي.</p></div>
+      <div class="price">250 جنيه</div><button class="btn" onclick="addItem('عسل زهرة البرسيم',250)">أضف إلى السلة</button>
+    </div>
+    <div class="product">
+      <img src="cotton.png" alt="عسل زهرة القطن">
+      <h3>عسل زهرة القطن</h3><span class="tag">نكهة مميزة</span>
+      <p>قد يتبلور العسل الطبيعي مع الوقت، وقد يتغير لونه وقوامه حسب مصدر الرحيق.</p>
+      <div class="product-info"><h4>🍯 معلومات عن المنتج</h4><ul>
+        <li><strong>مصدر للطاقة:</strong> يحتوي على سكريات تمد الجسم بالطاقة.</li>
+        <li><strong>استخدام غذائي:</strong> مناسب للتحلية وإضافته لبعض الأطعمة والحلويات.</li>
+        <li><strong>التبلور الطبيعي:</strong> تبلور العسل ظاهرة طبيعية لا تعني بالضرورة أن العسل فاسد.</li>
+      </ul><p>لا توجد أدلة كافية على أن عسل القطن يعالج أمراضًا بعينها.</p></div>
+      <div class="price">250 جنيه</div><button class="btn" onclick="addItem('عسل زهرة القطن',250)">أضف إلى السلة</button>
+    </div>
+    <div class="product">
+      <img src="banana.png" alt="عسل زهور الموز">
+      <h3>عسل زهور الموز</h3><span class="tag">النوع الداكن</span>
+      <p>صورة المنتج مضافة حسب طلبك. تأكد من مصدر المنتج الفعلي قبل وصفه بأنه عسل زهور الموز.</p>
+      <div class="product-info"><h4>🍯 معلومات عن المنتج</h4><ul>
+        <li><strong>مصدر للطاقة:</strong> يحتوي العسل على سكريات تمد الجسم بالطاقة.</li>
+        <li><strong>استخدام غذائي:</strong> يمكن استخدامه للتحلية وإضافته للزبادي والشوفان.</li>
+        <li><strong>اختلاف التركيبة:</strong> تختلف العناصر الغذائية حسب مصدر العسل، ولا يمكن تحديدها من اللون وحده.</li>
+      </ul><p>لا ينبغي استخدام العسل بدلًا من العلاج الطبي.</p></div>
+      <div class="price">250 جنيه</div><button class="btn" onclick="addItem('عسل زهور الموز',250)">أضف إلى السلة</button>
+    </div>
+  </div>
+  <div class="notice"><strong>تنبيه صحي:</strong> العسل يحتوي على السكريات ويُستهلك باعتدال. لا يُعطى للأطفال أقل من 12 شهرًا بسبب خطر التسمم الوشيقي. وإذا كنت تعاني من السكري، فاحسب سكريات العسل ضمن نظامك الغذائي.</div>
+</section>
+
+<section class="cart-section" id="cart">
+  <h2 class="title">سلة المشتريات 🛒</h2>
+  <div class="cart-box">
+    <div id="cart-items"><p>سلة المشتريات فاضية. اختار منتج من منتجاتنا!</p></div>
+    <div class="total">الإجمالي: <span id="total">0</span> جنيه</div>
+    <div class="actions"><button class="btn" onclick="orderWhatsApp()">اطلب عن طريق واتساب</button><button class="btn clear-btn" onclick="clearCart()">إفراغ السلة</button></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="title">تواصل مع عسل وشفاء</h2>
+  <p class="intro">عندك استفسار أو عايز تطلب منتج؟ إحنا في خدمتك.</p>
+  <div class="contact-card">
+    <p>📞 الرقم الأول: <a href="tel:01017767507">01017767507</a></p>
+    <p>📞 الرقم الثاني: <a href="tel:01094780955">01094780955</a></p>
+    <p style="margin-top:20px"><a class="btn" href="https://wa.me/201017767507" target="_blank" rel="noopener">تواصل معنا على واتساب</a></p>
+  </div>
+</section>
+
+<footer><img src="logo.svg" alt="شعار عسل وشفاء"><p>© 2026 عسل وشفاء 🍯</p><p>شكراً لزيارتك، نتمنى نشوفك تاني!</p></footer>
+
+<script>
+let cart = [];
+function addItem(name, price) {
+  cart.push({name:name, price:price});
+  renderCart();
+  document.getElementById("cart").scrollIntoView({behavior:"smooth"});
+}
+function removeItem(index) { cart.splice(index,1); renderCart(); }
+function clearCart() { cart=[]; renderCart(); }
+function renderCart() {
+  const container=document.getElementById("cart-items");
+  const totalElement=document.getElementById("total");
+  if(cart.length===0) {
+    container.innerHTML="<p>سلة المشتريات فاضية. اختار منتج من منتجاتنا!</p>";
+    totalElement.textContent="0"; return;
+  }
+  let html="", total=0;
+  cart.forEach(function(item,index) {
+    total+=item.price;
+    html+=`<div class="cart-item"><span>${item.name}</span><span>${item.price} جنيه</span><button class="remove-btn" onclick="removeItem(${index})">حذف</button></div>`;
+  });
+  container.innerHTML=html; totalElement.textContent=total;
+}
+function orderWhatsApp() {
+  if(cart.length===0) { alert("ضيف منتج واحد على الأقل للسلة الأول."); return; }
+  let message="السلام عليكم، عايز أطلب من عسل وشفاء:\n", total=0;
+  cart.forEach(function(item,index) {
+    message+=(index+1)+"- "+item.name+" - "+item.price+" جنيه\n"; total+=item.price;
+  });
+  message+="\nالإجمالي: "+total+" جنيه";
+  window.open("https://wa.me/201017767507?text="+encodeURIComponent(message),"_blank");
+}
+</script>
+</body>
+</html>
